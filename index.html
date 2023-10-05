@@ -16,12 +16,15 @@
 <body>
     <header>
         <img src="images/logo.svg" alt="Head logotype" class="logo">
-        <ul class="nav">
-            <li class="hidden-s">Works</li>
-            <li class="hidden-s">Services</li>
-            <li class="hidden-s">Contacts</li>
-        </ul>
-        <img src="images/Icon.svg" alt="Three dots icon" class="hidden-m-l">
+        <div class="nav" id="nav-bar">
+            <a href="#works">Works</a>
+            <a href="#services">Services</a>
+            <a href="#contacts">Contacts</a>
+            <a href="#dropdown">Dropdown</a>
+            <a class="icon" onclick="burgerMenu()">
+                <img src="images/Icon.svg" alt="Three dots icon" class="dots">
+            </a>
+        </div>
     </header>
     <main>
         <h1>Patagonia</h1>
@@ -29,6 +32,16 @@
         <div class="horses" alt="three horses at the tundra"></div>
     </main>   
 
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-bar");
+            if (burger.className === "nav") {
+            burger.className += " responsive";
+            } else {
+            burger.className = "nav";
+            }
+        }
+        </script>
 
 </body>
 </html>

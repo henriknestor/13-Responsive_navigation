@@ -4,6 +4,7 @@
     font-family: 'Source Sans 3', sans-serif;
     color: #242635;
     text-align: center;
+    text-decoration: none;
   }
 
 h1 {
@@ -24,7 +25,6 @@ header {
     width: 80%;
     max-width: 940px;
     margin: 0 auto 0;
-    padding-right: 53px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,6 +39,20 @@ header {
     display: flex;
     flex-direction: row;
     gap: 30px;
+}
+
+.nav .icon {
+    display: none;
+  }
+
+.dots {
+    width: 42px;
+    height: 42px;
+  }
+
+.dots:hover {
+    cursor: pointer;
+    background-color: #eee;
 }
 
 .horses {
@@ -68,9 +82,6 @@ header {
     header {
         height: 102px;
     }
-    .hidden-m-l {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 550px) {
@@ -89,15 +100,22 @@ header {
     header {
         height: 57px;
     }
-
-    .hidden-s {
-        display: none;
+    .nav a:not(:last-child) {display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
     }
 
-    .hidden-m-l {
-        width: 42px;
-        height: 42px;
-        display: inline;
+    .nav.responsive {position: relative;}
+    .nav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
     }
 }
 
@@ -116,8 +134,5 @@ header {
     }
     header {
         height: 162px;
-    }
-    .hidden-m-l {
-        display: none;
     }
 }
