@@ -6,13 +6,13 @@ body {
   
 .nav {
   overflow: hidden;
-  background-color: #a0a9d1;
+  background-color: #343e6a;
 }
 
 .nav a {
   float: left;
   display: block;
-  /* color: #ff0000; */
+  color: #ffffff;
   text-align: center;
   height: 42px;
   /* padding: 14px 16px; */
